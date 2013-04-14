@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<title>SimpleShare</title>
+		<style>
+			body {
+				min-width: 10em;
+				overflow-x: hidden;
+				margin: 0;
+				padding: 0;
+				font-family: Sans-Serif;
+				font-size: 10pt;
+			}
+				
+			span.ServiceTitle {
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+			
+			div#SharingHeader {
+				background-color: #474747;
+				color: White;
+				padding: 0.5em;
+			}
+			
+			div.SharingService {
+				width: 100%;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				vertical-align: middle;
+				height: 20px;
+				line-height: 20px;
+				border-bottom: 1px solid DarkGray;
+			}
+			
+			div.last {
+				border-bottom-width: 0;
+			}
+			
+			div.SharingService:hover {
+				background-color: #E5E5E5;
+			}
+			
+			img {
+				margin-left: 0.5em;
+				margin-right: 0.5em;
+				vertical-align: middle;
+				height: 100%;
+			}
+		</style>
+		<script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script> 
+		<script src="simpleshare.js"></script>
+	</head>
+	<body>
+		<div id="SharingHeader">
+			Share link
+		</div>
+		<div id="FbShare" class="SharingService">
+			<img src="icons/facebook.png" /> <span class="ServiceTitle">Facebook</span>
+		</div>
+		<div id="TwitterShare" class="SharingService">
+			<img src="icons/twitter.png" /> <span class="ServiceTitle">Twitter</span>
+		</div>
+		<div class="SharingService" id="GPlusShare">
+			<img src="icons/google-plus.png" /> <span class="ServiceTitle">Google+</span>
+		</div>
+		<div class="SharingService last" id="EmailShare">
+			<img src="icons/email.png" /> <span class="ServiceTitle">Email</span>
+		</div>
+	</body>
+</html>
+
