@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	var SharingHeaderText = chrome.i18n.getMessage("SharingHeadingLabel");
+	$("div#SharingHeader").text(SharingHeaderText);
+
 	$("div.SharingService").click(function(event) {
 	
 		// Figure out which service was clicked.
@@ -30,6 +33,10 @@ $(document).ready(function() {
 					break;
 				case "GPlusShare":
 					var shareUrl = "https://plus.google.com/share?url=" + currentUrl;
+					chrome.windows.create({'url': shareUrl, 'width':550, 'height': 420, 'type': 'popup'});
+					break;
+				case "GMailShare":
+					var shareUrl = "https://mail.google.com/mail/?fs=1&view=cm&su&tf=1&shva=1&body=" + currentUrl;
 					chrome.windows.create({'url': shareUrl, 'width':550, 'height': 420, 'type': 'popup'});
 					break;
 				case "EmailShare":

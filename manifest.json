@@ -3,7 +3,8 @@
 
   "name": "SimpleShare",
   "description": "Provides simple social network sharing of visited sites directly from Chrome.",
-  "version": "1.0.1",
+  "version": "1.1.0",
+  "default_locale": "en",
 
   "background": {
     "scripts": ["background.js"]
